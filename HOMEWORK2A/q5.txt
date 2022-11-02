@@ -1,0 +1,4 @@
+1. No change
+2. Value changes from [32] -> [33]
+3. The difference between the answers is because increment_int_b initializes it as some specific index item, and in the
+   main function it is contructed as a list assigned to b. 
