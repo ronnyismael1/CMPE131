@@ -1,14 +1,16 @@
 # TO DO: there's code missing in one or more lines below
-class Base:
+class Base():
     def __init__(self, x, y, size):
-        # TO DO: will need to fill this in
+        self.x = x
+        self.y = y
+        self.size = size
         
     def draw(self):
         return ""
     
-class Circle():
-    def __init__(x, y, size):
-        super().__init__(x,y,size)
+class Circle(Base):
+    def __init__(self, x, y, size):
+        super().__init__(x, y, size)
     def draw(self):
         return f"""
 ({self.x}, {self.y})
@@ -25,15 +27,16 @@ class Circle():
   ,                      ,
     ,                 , '
       ' - , _ _ _ , '
-              """
+"""
 
 class Square(Base):
-    def __init__(self, y, size):
-        super().__init__(x,y,size)
-    def draw():
+    def __init__(self, x, y, size):
+        super().__init__(x, y, size)
+    def draw(self):
         return f"""
-({self.x}, {self.y})
+({self.x}, {self.y}) 
 {self.size}
+
 --------------------
 |                  |
 |                  |
