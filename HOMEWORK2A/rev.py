@@ -1,5 +1,5 @@
-def reverse_list():
-    input = [1, True, 9, 'Hi', 3]
+def reverse_list(x):
     output = []
-    for i in input:
+    for i in x:
         output.insert(0,i)
+    return output

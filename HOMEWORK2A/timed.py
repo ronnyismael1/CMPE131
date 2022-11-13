@@ -1,16 +1,8 @@
 import time
-
-def count(func):
-    def wrapper(*args, **kwargs):
-        stri = "Total time "
-        temp = func(*args, **kwargs)
-        print (stri,temp)
+def timeme(func):
+    def wrapper():
+        x = time.time()
+        func()
+        y = time.time()
+        print("Total time ",y-x)
     return wrapper
-
-@count
-def timeme(t):
-    # time.sleep(2)
-    t = time.time() - t
-    return (t)
-    
-timeme(time.time())
